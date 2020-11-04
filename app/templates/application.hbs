@@ -1,3 +1,22 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1 id="title">memory-perf</h1>
+<div>
+  <h2>Classic</h2>
+  <ul>
+    {{#each this.count as |i|}}
+      <li>
+        <OldStyle @input="value is {{i}}" />
+      </li>
+    {{/each}}
+  </ul>
+</div>
 
-{{outlet}}
+<div>
+  <h2>Glimmer</h2>
+  <ul>
+    {{#each this.count as |i|}}
+      <li>
+        <NewStyle @input="value is {{i}}" />
+      </li>
+    {{/each}}
+  </ul>
+</div>
